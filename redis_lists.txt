@@ -1,0 +1,18 @@
+-- Inserir Itens em uma lista
+LPUSH ultimas_noticiais "Noticia 3"
+LPUSH ultimas_noticiais "Noticia 2"
+LPUSH ultimas_noticiais "Noticia 1"
+
+-- Listar o item mais novo
+LINDEX ultimas_noticias 0
+
+-- Listar a quantidade de itens da lista
+LLEN ultimas_noticiais
+
+-- Listar os itens por um range
+LRANGE ultimas_noticiais 1 2
+
+-- Limitar - remover itens atraves de uma selecao
+LTRIM ultimas_noticiais 0 2
+
+
