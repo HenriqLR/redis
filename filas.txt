@@ -1,0 +1,17 @@
+-- Adiciona itens na fila
+RPUSH "fila:confirma-email" "henrique@gmail.com.br"
+RPUSH "fila:confirma-email" "fernando@gmail.com.br"
+RPUSH "fila:confirma-email" "daniel@gmail.com.br"
+
+-- Verifica quantidade de itens na fila
+LLEN "fila:confirma-email"
+
+-- Exibe os itens da fila
+LRANGE "fila:confirma-email" 0 2
+
+-- Mostra o primeiro item da fila (a esquerda)
+LINDEX fila:confirma-mail 0
+
+--Remove item da fila (a esquerda)
+LPOP fila:confirma-email
+

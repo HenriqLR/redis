@@ -1,0 +1,10 @@
+-- Insere itens em um fila
+RPUSH "fila:confirma-email" "henrique@gmail.com.br"
+RPUSH "fila:confirma-email" "fernando@gmail.com.br"
+RPUSH "fila:confirma-email" "daniel@gmail.com.br"
+
+-- Espera por 30 segundos (esquerda)
+BLPOP fila:confirma-email 30
+
+-- Espera indefinidamente (esquerda)
+BLPOP fila:confirma-email 0

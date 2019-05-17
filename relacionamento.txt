@@ -1,0 +1,18 @@
+-- Criando um conjunto
+    -- Em um conjunto nao se repete os itens
+SADD "relacionamentos:henrique" "jenifer"
+SADD "relacionamentos:henrique" "fernando"
+SADD "relacionamentos:henrique" "renan"
+
+-- Lista a cardinalidade do conjunto
+SCARD "relacionamentos:henrique"
+
+-- Lista os itens do conjunto
+SMEMBERS "relacionamentos:henrique"
+
+-- Verifica se um membro pertence ao conunto
+SISMEMBER "relacionamentos:henrique" "renan"
+
+-- Remove um relacionamento
+SREM "relacionamentos:henrique" "renan"
+
