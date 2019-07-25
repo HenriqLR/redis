@@ -1,0 +1,11 @@
+# Criacao de Volume no Docker
+sudo docker volume create dados-do-banco
+
+# Listar Volumes criados
+sudo docker volume ls
+
+# Iniciar Container Docker referenciando volume criado
+sudo docker run --name redis_server -v dados-do-banco:/data  -d -p 6379:6379 -i -t redis
+
+# Listar Containers em stop
+sudo docker ps -f "status=exited"
